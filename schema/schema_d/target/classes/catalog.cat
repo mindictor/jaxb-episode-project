@@ -1,0 +1,2 @@
+REWRITE_SYSTEM "http://org.test.schema/schema_a" "maven:org.test.schema:schema_a:jar::!"
+REWRITE_SYSTEM "http://org.test.schema/schema_b" "maven:org.test.schema:schema_b:jar::!"

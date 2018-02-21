@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.test.schema</groupId>
+	<artifactId>schema_test</artifactId>
+	<version>1.0.0B0-SNAPSHOT</version>
+	<name>schema_test: [Parent Project]</name>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>schema</module>
+	</modules>
+
+	<!-- Properties -->
+	<properties>
+		<!-- JAVA SOURCE, TARGET, AND COMPLIANCE VERSION -->
+		<version.java>1.8</version.java>
+
+		<!-- SonarQube Configuration -->
+		<sonar.language>java</sonar.language>
+		<plugin.qualinsight-mojo-cobertura-core.version>1.1.0</plugin.qualinsight-mojo-cobertura-core.version>
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+		<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.maven>3.5.2</version.maven>
+
+		<!-- SHARED LIBRARY DEPENDENCY VERSIONS -->
+		<version.mail>1.5.0-b01</version.mail>
+		<version.velocity>2.0</version.velocity>
+		<version.commons-beanutils>1.8.0</version.commons-beanutils>
+		<version.commons-cli>1.3.1</version.commons-cli>
+		<version.commons-codec>1.3</version.commons-codec>
+		<version.commons-collections>3.2.1</version.commons-collections>
+		<version.commons-digester>1.8.1</version.commons-digester>
+		<version.commons-httpclient>3.1</version.commons-httpclient>
+		<version.commons-io>1.4</version.commons-io>
+		<version.commons-lang>2.4</version.commons-lang>
+		<version.commons-lang3>3.3.2</version.commons-lang3>
+		<version.commons-logging>1.1.1</version.commons-logging>
+		<version.stax>1.2.0</version.stax>
+		<version.jing>20081028</version.jing>
+		<version.poi>3.6</version.poi>
+		<version.opencsv>1.8</version.opencsv>
+		<version.jdom>1.1</version.jdom>
+		<version.piccolo>1.0.3</version.piccolo>
+		<version.xmlbeans>1.0</version.xmlbeans>
+		<version.junit>4.11</version.junit>
+		<version.protobuf>3.4.0</version.protobuf>
+		<version.protobuf.format>1.4</version.protobuf.format>
+		<version.findbugs>1.3.2-201002241900</version.findbugs>
+
+		<!-- CORE DEPENDENCY VERSIONS -->
+		<version.css>2.2</version.css>
+		<version.icmd>1.0</version.icmd>
+		<version.acmd.sim>1.3.6</version.acmd.sim>
+		<version.dmapi>1.0</version.dmapi>
+		<version.jersey2>2.22.1</version.jersey2>
+		<version.restlet>1.1.2</version.restlet>
+		<version.restlet.simple>2.1.6</version.restlet.simple>
+		<version.stax2>1.0.1</version.stax2>
+		<version.wstx>3.2.8</version.wstx>
+		<version.sparklines>1.18</version.sparklines>
+		<version.representqueens>1.2</version.representqueens>
+		<version.activemq>5.14.5</version.activemq>
+		<version.ant>1.8.2</version.ant>
+		<version.xerces>2.9.0</version.xerces>
+		<version.xerces-xml-parser-apis>2.6.2</version.xerces-xml-parser-apis>
+		<!-- xeger "snapshot" is lower case because that's what is released- but
+			the jar could not be uploaded to Nexus with all capital SNAPSHOT -->
+		<version.xeger>1.0-snapshot</version.xeger>
+		<version.automaton>1.11-8</version.automaton>
+		<version.xml-commons>1.3.04</version.xml-commons>
+		<version.lmax>3.3.6</version.lmax>
+		<version.spring>4.2.4.RELEASE</version.spring>
+		<version.spring-boot>1.5.2.RELEASE</version.spring-boot>
+		<version.log4j>2.8.1</version.log4j>
+		<version.slf4j>1.7.24</version.slf4j>
+		<version.guava>22.0</version.guava>
+		<version.mariadb>2.2.0</version.mariadb>
+		<version.aspectj>1.8.13</version.aspectj>
+		<version.aspectj.plugin>1.10</version.aspectj.plugin>
+		<version.picocli>2.3.0</version.picocli>
+		<version.shade>3.1.0</version.shade>
+
+		<!-- JAXB2-MAVEN-PLUGIN DEPENDENCY VERSIONS -->
+		<version.maven-dependency-plugin>3.0.2</version.maven-dependency-plugin>
+		<version.maven-bundle-plugin>3.5.0</version.maven-bundle-plugin>
+		<version.jaxb2-maven-plugin>2.3.1</version.jaxb2-maven-plugin>
+		<version.maven-clean-plugin>3.0.0</version.maven-clean-plugin>
+		<version.annox>1.0.2</version.annox>
+
+		<!-- maven-jaxb2-plugin DEPENDENCY VERSIONS -->
+		<version.maven-jaxb2-plugin>0.13.3</version.maven-jaxb2-plugin>
+		<version.jaxb2-basics>0.6.4</version.jaxb2-basics>
+		<version.jaxb2-basics-runtime>1.11.1</version.jaxb2-basics-runtime>
+		<version.jaxb2-basics-annotate>1.0.4</version.jaxb2-basics-annotate>
+		<version.jaxb2-commons-lang>2.4</version.jaxb2-commons-lang>
+		<version.jackson-annotations>2.9.4</version.jackson-annotations>
+		<version.jaxb2-namespace-prefix>1.3</version.jaxb2-namespace-prefix>
+
+		<deliveredResourcesDirectory>${project.build.directory}/resources</deliveredResourcesDirectory>
+		<deliveredTestResourcesDirectory>${project.build.directory}/test-resources</deliveredTestResourcesDirectory>
+	</properties>
+
+	<!-- Build Control -->
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/schema</directory>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>false</filtering>
+			</testResource>
+		</testResources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${version.maven-clean-plugin}</version>
+					<configuration>
+						<filesets>
+							<fileset>
+								<directory>${project.basedir}</directory>
+								<excludes>
+									<exclude>**/oldsrc/**</exclude>
+								</excludes>
+								<includes>
+									<include>dependency-reduced-pom.xml</include>
+									<include>**/target/**</include>
+									<include>**/outputs/**</include>
+								</includes>
+							</fileset>
+						</filesets>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.7.0</version>
+					<configuration>
+						<jvm>${java.home}/../bin/java</jvm>
+						<!-- Set "useIncrementalCompilation" property in maven-compiler-plugin:3.7.0
+							to true to see if the bug that keeps compiling everything regardless of whether
+							or not it needs it in 3.1 has been fixed -->
+						<useIncrementalCompilation>true</useIncrementalCompilation>
+						<verbose>false</verbose>
+						<fork>true</fork>
+						<executable>${java.home}/../bin/javac</executable>
+						<compilerVersion>${version.java}</compilerVersion>
+						<debug>true</debug>
+						<debuglevel>lines,vars,source</debuglevel>
+						<source>${version.java}</source>
+						<target>${version.java}</target>
+						<meminitial>1024M</meminitial>
+						<maxmem>2048M</maxmem>
+						<compilerArgs>
+							<!-- location of the annotated JDK, which comes from a Maven dependency -->
+							<arg>-Xbootclasspath/p:${annotatedJdk}</arg>
+							<!-- Uncomment the following line to use the type annotations compiler. -->
+							<!-- <arg>-J-Xbootclasspath/p:${typeAnnotationsJavac}</arg> -->
+						</compilerArgs>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<archive>
+							<index>true</index>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+							</manifest>
+							<manifestEntries>
+								<mode>development</mode>
+								<url>${project.url}</url>
+								<key>value</key>
+							</manifestEntries>
+						</archive>
+					</configuration>
+					<executions>
+						<execution>
+							<id>default-jar</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${project.build.directory}</outputDirectory>
+								<includes>
+									<include>**/*.xsd</include>
+									<include>**/*.xjc</include>
+									<include>**/*.class</include>
+									<include>**/sun-jaxb.episode</include>
+									<include>**/catalog.cat</include>
+								</includes>
+								<excludes>
+									<exclude>**/*Test.class</exclude>
+								</excludes>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<!-- Plugin Instantiation -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>[${version.maven},)</version>
+									<message>Check for Maven version &gt;=${version.maven} failed.
+										Update your Maven install.</message>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- POM DEFINED PROFILES -->
+	<profiles>
+		<profile>
+			<id>only-eclipse</id>
+			<activation>
+				<property>
+					<name>m2e.version</name>
+				</property>
+			</activation>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<!-- Following resolves build issues Eclipse has with Maven plugins -->
+						<plugin>
+							<groupId>org.eclipse.m2e</groupId>
+							<artifactId>lifecycle-mapping</artifactId>
+							<version>1.0.0</version>
+							<configuration>
+								<lifecycleMappingMetadata>
+									<pluginExecutions>
+										<!-- caster-maven-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.codehaus.mojo</groupId>
+												<artifactId>castor-maven-plugin</artifactId>
+												<versionRange>[1.0.0,)</versionRange>
+												<goals>
+													<goal>generate</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+										<!-- build-helper-maven-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.codehaus.mojo</groupId>
+												<artifactId>build-helper-maven-plugin</artifactId>
+												<versionRange>[1.0.0,)</versionRange>
+												<goals>
+													<goal>add-source</goal>
+													<goal>regex-property</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+										<!-- maven-enforcer-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.apache.maven.plugins</groupId>
+												<artifactId>maven-enforcer-plugin</artifactId>
+												<versionRange>[1.0.0,)</versionRange>
+												<goals>
+													<goal>enforce</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+										<!-- maven-dependency-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.apache.maven.plugins</groupId>
+												<artifactId>maven-dependency-plugin</artifactId>
+												<versionRange>[1.0.0,)</versionRange>
+												<goals>
+													<goal>unpack-dependencies</goal>
+													<goal>copy-dependencies</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+										<!-- maven-antrun-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.apache.maven.plugins</groupId>
+												<artifactId>maven-antrun-plugin</artifactId>
+												<versionRange>[1.0.0,)</versionRange>
+												<goals>
+													<goal>run</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore />
+											</action>
+										</pluginExecution>
+										<!-- swagger-maven-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>com.github.kongchen</groupId>
+												<artifactId>swagger-maven-plugin</artifactId>
+												<versionRange>[3.1.5,)</versionRange>
+												<goals>
+													<goal>generate</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore></ignore>
+											</action>
+										</pluginExecution>
+										<!-- swagger-codegen-maven-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>io.swagger</groupId>
+												<artifactId>swagger-codegen-maven-plugin</artifactId>
+												<versionRange>[2.2.3,)</versionRange>
+												<goals>
+													<goal>generate</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore></ignore>
+											</action>
+										</pluginExecution>
+										<!-- asciidoctor-maven-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.asciidoctor</groupId>
+												<artifactId>asciidoctor-maven-plugin</artifactId>
+												<versionRange>[1.5.3,)</versionRange>
+												<goals>
+													<goal>process-asciidoc</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore></ignore>
+											</action>
+										</pluginExecution>
+										<!-- swagger2markup-maven-plugin -->
+										<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>io.github.swagger2markup</groupId>
+												<artifactId>swagger2markup-maven-plugin</artifactId>
+												<versionRange>[1.3.3,)</versionRange>
+												<goals>
+													<goal>convertSwagger2markup</goal>
+												</goals>
+											</pluginExecutionFilter>
+											<action>
+												<ignore></ignore>
+											</action>
+										</pluginExecution>
+									</pluginExecutions>
+								</lifecycleMappingMetadata>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+</project>
