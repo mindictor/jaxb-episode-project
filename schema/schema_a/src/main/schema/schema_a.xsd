@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://org.test.schema/schema_a"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://org.test.schema/schema_a"
+<xs:schema targetNamespace="http://org.test.schema"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://org.test.schema"
 	elementFormDefault="qualified">
 	<xs:simpleType name="SchemaABasicEnumeration">	
 		<xs:restriction base="xs:string">

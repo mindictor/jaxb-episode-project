@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://org.test.schema/schema_b"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://org.test.schema/schema_b"
-	xmlns:a="http://org.test.schema/schema_a" elementFormDefault="qualified">
-	<xs:import namespace="http://org.test.schema/schema_a"
-		schemaLocation="http://org.test.schema/schema_a/schema_a.xsd" />
+<xs:schema targetNamespace="http://org.test.schema"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://org.test.schema"
+	elementFormDefault="qualified">
+	<xs:include schemaLocation="schema_a.xsd" />
 	<xs:element name="schemaBComplexType" type="SchemaBComplexType" />
 	<xs:complexType name="SchemaBComplexType">
 		<xs:sequence>
-			<xs:element name="basicEnumInSchemaB" type="a:SchemaABasicEnumeration" />
+			<xs:element name="basicEnumInSchemaB" type="SchemaABasicEnumeration" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
