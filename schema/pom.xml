@@ -15,6 +15,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>schemas_abcd</module>
 		<module>schema_a</module>
 		<module>schema_b</module>
 		<module>schema_c</module>
@@ -23,13 +24,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- ANNOX -->
-			<dependency>
-				<groupId>org.jvnet.annox</groupId>
-				<artifactId>annox</artifactId>
-				<version>${version.annox}</version>
-			</dependency>
-
 			<!-- JAXB2 -->
 			<dependency>
 				<groupId>org.jvnet.jaxb2_commons</groupId>
@@ -59,32 +53,14 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
-		<!-- ANNOX -->
-		<dependency>
-			<groupId>org.jvnet.annox</groupId>
-			<artifactId>annox</artifactId>
-		</dependency>
-
 		<!-- JAXB2 -->
-		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.jvnet.jaxb2_commons</groupId>
 			<artifactId>jaxb2-basics-runtime</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-annotate</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-commons-lang</artifactId>
 		</dependency>
 	</dependencies>
 	<build>
@@ -121,17 +97,5 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics</artifactId>
-				<version>${version.jaxb2-basics}</version>
-			</plugin>
-			<plugin>
-				<groupId>org.jvnet.jaxb2_commons</groupId>
-				<artifactId>jaxb2-basics-annotate</artifactId>
-				<version>${version.jaxb2-basics-annotate}</version>
-			</plugin>
-		</plugins>
 	</build>
 </project>

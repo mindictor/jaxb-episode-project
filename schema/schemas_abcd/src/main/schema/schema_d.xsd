@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://org.test.schema"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://org.test.schema"
+	elementFormDefault="qualified">
+	<xs:include schemaLocation="schema_a.xsd"/>
+	<xs:include schemaLocation="schema_b.xsd"/>
+	<xs:element name="schemaDComplexType" type="SchemaDComplexType" />
+	<xs:complexType name="SchemaDComplexType">
+		<xs:sequence>
+			<xs:element name="schemaAEnum" type="SchemaABasicEnumeration"/>
+			<xs:element name="schemaBEnum" type="SchemaBComplexType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="schemaDSimpleType">
+		<xs:restriction base="xs:double">
+			<xs:minInclusive value="1000" />
+			<xs:maxInclusive value="1999" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
