@@ -1,2 +1,3 @@
-REWRITE_SYSTEM "http://org.test.schema/schema_a" "maven:org.test.schema:schema_a:jar::!"
-REWRITE_SYSTEM "http://org.test.schema/schema_b" "maven:org.test.schema:schema_b:jar::!"
+REWRITE_SYSTEM "http://org.test.schema/schema_a.xsd" "maven:org.test.schema:schema_a:jar!/schema_a.xsd"
+REWRITE_SYSTEM "http://org.test.schema/schema_b.xsd" "maven:org.test.schema:schema_b:jar!/schema_b.xsd"
+REWRITE_SYSTEM "http://org.test.schema/schema_d.xsd" "schema_d.xsd"

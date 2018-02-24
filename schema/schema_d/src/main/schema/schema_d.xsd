@@ -2,8 +2,8 @@
 <xs:schema targetNamespace="http://org.test.schema"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://org.test.schema"
 	elementFormDefault="qualified">
-	<xs:incude schemaLocation="schema_a.xsd" />
-	<xs:incude schemaLocation="schema_b.xsd" />
+	<xs:include schemaLocation="schema_a.xsd" />
+	<xs:include schemaLocation="schema_b.xsd" />
 	<xs:element name="schemaDComplexType" type="SchemaDComplexType" />
 	<xs:complexType name="SchemaDComplexType">
 		<xs:sequence>

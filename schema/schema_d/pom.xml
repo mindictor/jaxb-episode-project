@@ -42,9 +42,10 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<catalog>src/main/schema/catalog.cat</catalog>
-							<schemaIncludes>schema_d.xsd</schemaIncludes>
-							<bindingIncludes>schema_d.xjb</bindingIncludes>
+							<schemas>
+								<schema><url>http://org.test.schema/schema_d.xsd</url></schema>
+							</schemas>
+							<episode>false</episode>
 						</configuration>
 					</execution>
 				</executions>

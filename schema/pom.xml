@@ -78,8 +78,8 @@
 						<useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
 						<schemaDirectory>src/main/schema</schemaDirectory>
 						<bindingDirectory>src/main/schema</bindingDirectory>
-						<schemaExcludes>*.xjb</schemaExcludes>
-						<bindingExcludes>*.xsd</bindingExcludes>
+						<schemaExcludes>*.xsd</schemaExcludes>
+						<catalog>src/main/schema/catalog.cat</catalog>
 						<args>
 							<arg>-Xannotate</arg>
 						</args>
