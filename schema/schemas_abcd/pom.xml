@@ -10,22 +10,9 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>schema_d</artifactId>
-	<name>Schema-D</name>
+	<artifactId>schemas_abcd</artifactId>
+	<name>Schemas-ABCD</name>
 	<packaging>jar</packaging>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.test.schema</groupId>
-			<artifactId>schema_a</artifactId>
-			<version>1.0.0B0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.test.schema</groupId>
-			<artifactId>schema_b</artifactId>
-			<version>1.0.0B0-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>
@@ -37,15 +24,13 @@
 				</goals>
 				<executions>
 					<execution>
-						<id>xjc-generate-schema_d</id>
+						<id>xjc-generate-schemas_abcd</id>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<schemas>
-								<schema><url>http://org.test.schema/schema_d.xsd</url></schema>
-							</schemas>
-							<episode>false</episode>
+							<schemaIncludes>*.xsd</schemaIncludes>
+							<schemaExcludes>*.none</schemaExcludes>
 						</configuration>
 					</execution>
 				</executions>

@@ -26,7 +26,7 @@
 		<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<version.maven>3.5.2</version.maven>
+		<version.maven>3.3.9</version.maven>
 
 		<!-- SHARED LIBRARY DEPENDENCY VERSIONS -->
 		<version.mail>1.5.0-b01</version.mail>
@@ -91,12 +91,11 @@
 		<version.maven-bundle-plugin>3.5.0</version.maven-bundle-plugin>
 		<version.jaxb2-maven-plugin>2.3.1</version.jaxb2-maven-plugin>
 		<version.maven-clean-plugin>3.0.0</version.maven-clean-plugin>
-		<version.annox>1.0.2</version.annox>
 
 		<!-- maven-jaxb2-plugin DEPENDENCY VERSIONS -->
 		<version.maven-jaxb2-plugin>0.13.3</version.maven-jaxb2-plugin>
-		<version.jaxb2-basics>0.6.4</version.jaxb2-basics>
-		<version.jaxb2-basics-runtime>1.11.1</version.jaxb2-basics-runtime>
+		<version.jaxb2-basics>0.11.1</version.jaxb2-basics>
+		<version.jaxb2-basics-runtime>0.11.1</version.jaxb2-basics-runtime>
 		<version.jaxb2-basics-annotate>1.0.4</version.jaxb2-basics-annotate>
 		<version.jaxb2-commons-lang>2.4</version.jaxb2-commons-lang>
 		<version.jackson-annotations>2.9.4</version.jackson-annotations>
@@ -127,6 +126,10 @@
 		</testResources>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.7</version>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>

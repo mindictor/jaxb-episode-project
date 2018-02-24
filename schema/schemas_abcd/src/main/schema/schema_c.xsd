@@ -4,17 +4,17 @@
 	elementFormDefault="qualified">
 	<xs:include schemaLocation="schema_a.xsd" />
 	<xs:include schemaLocation="schema_b.xsd" />
-	<xs:element name="schemaDComplexType" type="SchemaDComplexType" />
-	<xs:complexType name="SchemaDComplexType">
+	<xs:element name="schemaCComplexType" type="SchemaCComplexType" />
+	<xs:complexType name="SchemaCComplexType">
 		<xs:sequence>
-			<xs:element name="schemaAEnum" type="SchemaABasicEnumeration"/>
+			<xs:element name="schemaAEnum" type="SchemaABasicEnumeration" />
 			<xs:element name="schemaBEnum" type="SchemaBComplexType" />
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="schemaDSimpleType">
+	<xs:simpleType name="schemaCSimpleType">
 		<xs:restriction base="xs:double">
-			<xs:minInclusive value="1000" />
-			<xs:maxInclusive value="1999" />
+			<xs:minInclusive value="1" />
+			<xs:maxInclusive value="100" />
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

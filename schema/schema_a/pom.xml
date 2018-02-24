@@ -29,9 +29,28 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<schemaIncludes>schema_a.xsd</schemaIncludes>
-							<bindingIncludes>schema_a.xjb</bindingIncludes>
+							<schemas>
+								<schema><url>http://org.test.schema/schema_a.xsd</url></schema>
+							</schemas>
+							<episode>false</episode>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>process-sources</phase>
+						<configuration>
+							<target>
+								<delete dir="${basedir}/target/generated-sources/xjc/org/test/schema/jaxb2" includes="ObjectFactory.java"/>
+								<delete dir="${basedir}/target/generated-sources/xjc/org/test/schema/jaxb2" includes="package-info.java"/>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
