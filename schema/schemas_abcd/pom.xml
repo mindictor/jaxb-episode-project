@@ -30,7 +30,7 @@
 						</goals>
 						<configuration>
 							<schemaIncludes>*.xsd</schemaIncludes>
-							<bindingIncludes>*.xjb</bindingIncludes>
+							<schemaExcludes>*.none</schemaExcludes>
 						</configuration>
 					</execution>
 				</executions>
