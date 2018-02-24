@@ -10,5 +10,8 @@
 		<jaxb:bindings node="xs:complexType[@name='SchemaCComplexType']">
 			<annox:annotate>@javax.xml.bind.annotation.XmlRootElement(name = "schemaCComplexType")</annox:annotate>
 		</jaxb:bindings>
+        <jaxb:bindings node="xs:complexType[@name='DuplicateNamedType']">
+            <jaxb:class name="DuplicateNamedTypeC"/>
+        </jaxb:bindings>
 	</jaxb:bindings>
 </jaxb:bindings>

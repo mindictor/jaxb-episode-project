@@ -16,10 +16,12 @@
 
 	<modules>
 		<module>schemas_abcd</module>
+		<!--
 		<module>schema_a</module>
 		<module>schema_b</module>
 		<module>schema_c</module>
 		<module>schema_d</module>
+		-->
 	</modules>
 
 	<dependencyManagement>

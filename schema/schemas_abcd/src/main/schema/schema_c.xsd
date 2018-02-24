@@ -17,4 +17,9 @@
 			<xs:maxInclusive value="100" />
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="DuplicateNamedType">
+		<xs:sequence>
+			<xs:element name="schemaAEnum" type="SchemaABasicEnumeration"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
