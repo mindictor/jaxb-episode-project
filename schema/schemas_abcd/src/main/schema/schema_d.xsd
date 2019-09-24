@@ -2,8 +2,8 @@
 <xs:schema targetNamespace="http://org.test.schema"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://org.test.schema"
 	elementFormDefault="qualified">
-	<xs:include schemaLocation="schema_a.xsd" />
-	<xs:include schemaLocation="schema_b.xsd" />
+	<xs:include schemaLocation="schema_a.xsd"/>
+	<xs:include schemaLocation="schema_b.xsd"/>
 	<xs:element name="schemaDComplexType" type="SchemaDComplexType" />
 	<xs:complexType name="SchemaDComplexType">
 		<xs:sequence>
@@ -12,9 +12,15 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="schemaDSimpleType">
-		<xs:restriction base="xs:double">
+		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="1000" />
 			<xs:maxInclusive value="1999" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DuplicateNamedType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="500" />
+			<xs:maxInclusive value="999" />
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

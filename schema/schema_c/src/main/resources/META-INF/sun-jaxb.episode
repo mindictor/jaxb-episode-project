@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <bindings xmlns:tns="http://org.test.schema" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="org.test.schema.jaxb2"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="~tns:SchemaABasicEnumeration">
+      <typesafeEnumClass ref="org.test.schema.jaxb2.SchemaABasicEnumeration"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:SchemaBComplexType">
+      <class ref="org.test.schema.jaxb2.SchemaBComplexType"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:SchemaCComplexType">
+      <class ref="schema.test.org.SchemaCComplexType"/>
+    </bindings>
+  </bindings>
+</bindings>
